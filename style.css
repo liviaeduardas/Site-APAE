@@ -1,0 +1,108 @@
+/* 🎯 VARIÁVEIS DE COR */
+:root {
+  --orange: #F6AA3C;
+  --gold: #FED52D;
+  --porcelain: #F9FCFA;
+  --celadon: #A9C9A5;
+  --silver: #CAC9C6;
+
+  --dark: #2E2E2E;
+  --white: #FFFFFF;
+}
+
+/* 🌍 BASE GERAL */
+body {
+  background-color: var(--porcelain);
+  color: var(--dark);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🧭 NAVBAR */
+.navbar {
+  background-color: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar-item {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.navbar-item:hover {
+  color: var(--orange);
+}
+
+/* 🌄 HERO */
+.hero {
+  background-color: var(--celadon);
+  color: var(--white);
+}
+
+.hero .title,
+.hero .subtitle {
+  color: var(--white);
+}
+
+/* 📖 SEÇÕES */
+.section {
+  padding: 3rem 1.5rem;
+}
+
+/* 🧠 CARDS */
+.card {
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* TÍTULO DOS CARDS */
+.card .title {
+  color: var(--dark);
+}
+
+/* 🎉 EVENTOS (links nos cards) */
+a .card:hover {
+  border: 1px solid var(--celadon);
+}
+
+/* ❤️ CTA */
+.cta {
+  background-color: var(--celadon);
+  color: var(--white);
+  padding: 3rem 1.5rem;
+}
+
+.cta .title {
+  color: var(--white);
+}
+
+/* 🔘 BOTÕES */
+.button.is-warning {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+}
+
+.button.is-warning:hover {
+  background-color: #e6952f;
+}
+
+.button.is-light {
+  background-color: var(--gold);
+  color: var(--dark);
+}
+
+/* 📞 CONTATO */
+.section p {
+  margin-bottom: 0.5rem;
+}
+
+/* 🔻 FOOTER */
+.footer {
+  background-color: var(--silver);
+  color: var(--dark);
+}
