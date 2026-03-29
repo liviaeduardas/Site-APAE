@@ -1,12 +1,15 @@
 /* 🎯 VARIÁVEIS DE COR */
 :root {
   --orange: #F6AA3C;
+  --verdeClaro:#e2f4df;
   --gold: #FED52D;
+  --amareloClaro: #faf6dd;
   --porcelain: #F9FCFA;
+  --porcelain2: #f2f3f2;
   --celadon: #A9C9A5;
   --silver: #CAC9C6;
 
-  --dark: #2E2E2E;
+  --dark: #7d7d7d;
   --white: #FFFFFF;
 }
 
@@ -14,18 +17,27 @@
 body {
   background-color: var(--porcelain);
   color: var(--dark);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Open Sans', sans-serif;;
 }
 
 /* 🧭 NAVBAR */
 .navbar {
-  background-color: var(--white);
+  background-color: var(--celadon);
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .navbar-item {
-  color: var(--dark);
+  color: var(--porcelain);
   font-weight: 500;
+}
+
+.imagem-logo {
+  
+  height: 60px;
+  width: 50px;
+
+  display: block;
+  
 }
 
 .navbar-item:hover {
@@ -33,15 +45,41 @@ body {
 }
 
 /* 🌄 HERO */
-.hero {
-  background-color: var(--celadon);
-  color: var(--white);
+.hero-bg {
+  background-image: url('img/fotoAPAE.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  
+   background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.6) 0%,
+    rgba(0,0,0,0.6) 40%,
+    rgba(0,0,0,0.6) 70%,
+    rgba(0,0,0,0.0) 100%
+  );
+  
+}
+
+.hero-bg .hero-body {
+  position: relative;
+  z-index: 2;
 }
 
 .hero .title,
 .hero .subtitle {
-  color: var(--white);
+  color: var(--porcelain);
 }
+
 
 /* 📖 SEÇÕES */
 .section {
@@ -69,15 +107,33 @@ a .card:hover {
   border: 1px solid var(--celadon);
 }
 
+.cta2{
+  background-color: var(--porcelain2);
+  color: var(--dark);
+  padding: 2rem 1.5rem;
+}
+
+.imagem-sobre {
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  height: 300px;
+  width: 400px;
+
+  display: block;
+  margin: 0 auto; 
+}
+
+
 /* ❤️ CTA */
 .cta {
-  background-color: var(--celadon);
-  color: var(--white);
+  background-color: var(--porcelain);
+  color: var(--dark);
   padding: 3rem 1.5rem;
 }
 
-.cta .title {
-  color: var(--white);
+.title  {
+  font-family: 'Poppins', sans-serif;
+  color: var(--orange);
 }
 
 /* 🔘 BOTÕES */
@@ -103,6 +159,6 @@ a .card:hover {
 
 /* 🔻 FOOTER */
 .footer {
-  background-color: var(--silver);
+  background-color: var(--celadon);
   color: var(--dark);
 }
