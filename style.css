@@ -19,12 +19,12 @@ body {
 
 /* 🧭 NAVBAR */
 .navbar {
-  background-color: var(--white);
+  background-color: var(--celadon);
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .navbar-item {
-  color: var(--dark);
+  color: var(--porcelain);
   font-weight: 500;
 }
 
@@ -33,15 +33,33 @@ body {
 }
 
 /* 🌄 HERO */
-.hero {
-  background-color: var(--celadon);
-  color: var(--white);
+.hero-bg {
+  background-image: url('img/fotoAPAE.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.6) 0%,
+    rgba(0,0,0,0.4) 40%,
+    rgba(0,0,0,0.2) 70%,
+    rgba(0,0,0,0.0) 100%
+  );
 }
 
 .hero .title,
 .hero .subtitle {
   color: var(--white);
 }
+
 
 /* 📖 SEÇÕES */
 .section {
@@ -71,7 +89,7 @@ a .card:hover {
 
 /* ❤️ CTA */
 .cta {
-  background-color: var(--celadon);
+  background-color: var(--porcelain);
   color: var(--white);
   padding: 3rem 1.5rem;
 }
@@ -103,6 +121,6 @@ a .card:hover {
 
 /* 🔻 FOOTER */
 .footer {
-  background-color: var(--silver);
+  background-color: var(--celadon);
   color: var(--dark);
 }
