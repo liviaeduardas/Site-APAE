@@ -7,23 +7,25 @@
   --porcelain: #F9FCFA;
   --porcelain2: #f2f3f2;
   --celadon: #A9C9A5;
+  --celadonDark: #8aa287;
   --silver: #CAC9C6;
 
   --dark: #7d7d7d;
   --white: #FFFFFF;
 }
 
-/* 🌍 BASE GERAL */
+/* BASE GERAL */
 body {
   background-color: var(--porcelain);
   color: var(--dark);
   font-family: 'Open Sans', sans-serif;;
 }
 
-/* 🧭 NAVBAR */
+/* NAVBAR */
 .navbar {
   background-color: var(--celadon);
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
 }
 
 .navbar-item {
@@ -40,11 +42,12 @@ body {
   
 }
 
-.navbar-item:hover {
+.navbar .navbar-item:hover {
   color: var(--orange);
+  background-color: var(--porcelain2);
 }
 
-/* 🌄 HERO */
+/*  HERO */
 .hero-bg {
   background-image: url('img/fotoAPAE.jpg');
   background-size: cover;
@@ -81,12 +84,12 @@ body {
 }
 
 
-/* 📖 SEÇÕES */
+/*  SEÇÕES */
 .section {
   padding: 3rem 1.5rem;
 }
 
-/* 🧠 CARDS */
+/*  CARDS */
 .card {
   border-radius: 12px;
   transition: 0.3s;
@@ -113,25 +116,22 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
+
+
 /* TÍTULO DOS CARDS */
 .card .title {
   color: var(--celadon);
 }
 
-/* 🎉 EVENTOS (links nos cards) */
+.cta3 .title {
+  color: var(--celadonDark);
+}
+
+/*  EVENTOS (links nos cards) */
 a .card:hover {
   border: 1px solid var(--celadon);
 }
 
-.cta2{
-  background-color: var(--porcelain2);
-  padding: 2rem 1.5rem;
-}
-
-.cta2 p{
-  color: var(--dark);
-  margin-bottom: 15px;
-}
 
 
 .imagem-sobre {
@@ -155,10 +155,25 @@ a .card:hover {
   margin-bottom: 15px;
 }
 
-/* ❤️ CTA */
+/*  CTA */
 .cta {
   background-color: var(--porcelain);
   color: var(--dark);
+  padding: 3rem 2rem;
+}
+
+.cta2{
+  background-color: var(--porcelain2);
+  padding: 3rem 2rem;
+}
+
+.cta2 p{
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
+.cta3{
+  background-color: var(--verdeClaro);
   padding: 3rem 2rem;
 }
 
@@ -167,42 +182,73 @@ a .card:hover {
   color: var(--orange);
 }
 
+/* LINHAS */
+
 hr{
   border: none;
   height: 1px;
-  background: var(--verdeClaro);
+   background: linear-gradient(
+    to right,
+    var(--celadon),
+    transparent
+    );
 }
 
-/* 🔘 BOTÕES */
+.linha1{
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--orange),
+    transparent
+    );
+  width: 300px;
+}
+
+.linha2{
+  border: none;
+  height: 1px;
+  width: 300px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--celadonDark),
+    transparent
+    );
+  margin: 10px auto;
+}
+
+
+/*  BOTÕES */
 .button{
-   background-color: var(--porcelain);
+  background-color: var(--porcelain);
   color: var(--celadon);
   border: none;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  display: inline-block;
+  width: 180px;       
+  text-align: center;
+  padding: 10px 0;
+}
+
+.button:hover {
+  background-color: var(--porcelain2);
 }
 
 .button.is-warning {
   background-color: var(--orange);
   color: var(--white);
-  border: none;
 }
 
-.button.is-warning:hover {
-  background-color: #e6952f;
-}
 
 .button.is-light {
   background-color: var(--gold);
-  color: var(--dark);
+  color: var(--porcelain);
 }
 
-/* 📞 CONTATO */
-.section p {
-  margin-bottom: 0.5rem;
-}
-
-
-/* 🔻 FOOTER */
+/*  FOOTER */
 .footer {
   background-color: var(--celadon);
-  color: var(--dark);
+  color: var(--porcelain2);
+  padding: 15px;
 }

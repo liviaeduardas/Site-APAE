@@ -12,12 +12,13 @@
   <link rel="stylesheet" href="style.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
 <!-- 🧭 HEADER -->
-<nav class="navbar">
+<nav class="navbar ">
   <div class="navbar-brand">
     <a class="navbar-item">
       <img src="img/logo-APAE.png" class="imagem-logo">
@@ -26,16 +27,17 @@
 
   <div class="navbar-menu">
     <div class="navbar-end">
-      <a class="navbar-item">Home</a>
-      <a class="navbar-item">Sobre</a>
-      <a class="navbar-item">Serviços</a>
-      <a class="navbar-item">Como Ajudar</a>
-      <a class="navbar-item">Contato</a>
+      <a href="#home" class="navbar-item">Home</a>
+      <a href="#sobre" class="navbar-item">Sobre</a>
+      <a href="#servicos" class="navbar-item">Serviços</a>
+      <a href="#eventos" class="navbar-item">Eventos</a>
+      <a href="#ajuda" class="navbar-item">Como Ajudar</a>
+      <a href="#contato" class="navbar-item">Contato</a>
     </div>
   </div>
 </nav>
 
-<!-- 🌄 HERO -->
+<!--  HERO -->
 <section class="hero is-medium hero-bg">
   <div class="hero-body">
     <div class="container">
@@ -56,8 +58,8 @@
   </div>
 </section>
 
-<!-- 📖 SOBRE -->
-<section class="cta">
+<!--  SOBRE -->
+<section id="sobre" class="cta">
   <div class="container">
     <div class="columns is-vcentered">
       
@@ -79,7 +81,7 @@
 </section>
 
 <!-- 🧠 SERVIÇOS -->
-<section class="cta2 has-text-centered">
+<section id="servicos" class="cta2 has-text-centered">
   <div class="container">
     <h2 class="title has-text-centered">Serviços</h2>
 
@@ -143,8 +145,8 @@
   </div>
 </section>
 
-<!-- 🎉 EVENTOS -->
-<section class="cta has-text-centered">
+<!--  EVENTOS -->
+<section id="eventos" class="cta has-text-centered">
   <div class="container">
     <h2 class="title has-text-centered">Eventos</h2>
 
@@ -239,26 +241,55 @@
   </div>
 </section>
 
-<!-- ❤️ CTA -->
-<section class="cta2 has-text-centered">
+<!--  CTA -->
+<section id="ajuda" class="cta3 has-text-centered">
   <div class="container">
-    <h2 class="title">Chamada para ação</h2>
-    <a class="button is-warning">Botão 1</a>
-    <a class="button is-light">Botão 2</a>
+    <hr class="linha2">
+    <h2 class="title">Ajude a transformar vidas!</h2>
+    <hr class="linha2">
+    <a class="button is-warning">Doe Agora</a>
+    <a class="button is-light">Seja Voluntário</a>
   </div>
 </section>
 
-<!-- 📞 CONTATO -->
-<section class="cta has-text-centered">
+<!--  CONTATO -->
+<section id="contato" class="cta2 has-test-left">
   <div class="container">
-    <h2 class="title">Contato</h2>
-    <p><!-- telefone --></p>
-    <p><!-- email --></p>
-    <p><!-- endereço --></p>
+    <div class="columns">
+
+      <div class="column">
+        <h3 class="title is-5">Contato</h3>
+        <hr class="linha1">
+        <ul>
+          <li>
+            <span class="icon"><i class="fas fa-phone"></i></span>
+            (35) 98403-8042
+          </li>
+          <li>
+            <span class="icon"><i class="fas fa-location-dot"></i></span>
+            Rua Querubino Vilela Moscardini, 125, Ilicinea - MG, 37.175-000.
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3 class="title is-5">Siga Nossas Redes</h3>
+        <hr class="linha1">
+        <ul>
+        <li>
+          <span class="icon"><i class="fab fa-facebook"></i></span>
+          APAE de Ilicinea
+        </li>
+        <li>
+          <span class="icon"><i class="fab fa-instagram"></i></span>
+          deilicinea
+        </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- 🔻 FOOTER -->
+<!--  FOOTER -->
 <footer class="footer">
   <div class="content has-text-centered">
     <p>© 2026 - Todos os direitos reservados</p>
