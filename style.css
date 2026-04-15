@@ -16,7 +16,7 @@
 
 /* BASE GERAL */
 body {
-  background-color: var(--porcelain);
+  background-color: var(--porcelain2);
   color: var(--dark);
   font-family: 'Open Sans', sans-serif;;
 }
@@ -48,11 +48,20 @@ body {
 }
 
 /*  HERO */
+
+.hero-home{
+  background-image: url('img/apaefoto.jpeg');
+  min-height: 500px;
+}
+
+.hero-artesanato{
+  background-image: url('img/artesanato.jpeg');
+  min-height: 250px;
+}
+
 .hero-bg {
-  background-image: url('img/fotoAPAE.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 400px;
   position: relative;
   overflow: hidden;
 }
@@ -90,6 +99,17 @@ body {
 }
 
 /*  CARDS */
+.cardAtv {
+  background-color: var(--porcelain);
+  border-radius: 12px;
+  transition: 0.3s;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  margin: 30px;
+}
+
 .card {
   border-radius: 12px;
   transition: 0.3s;
