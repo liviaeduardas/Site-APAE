@@ -34,12 +34,9 @@ body {
 }
 
 .imagem-logo {
-  
   height: 60px;
   width: 50px;
-
   display: block;
-  
 }
 
 .navbar .navbar-item:hover {
@@ -54,18 +51,6 @@ body {
   min-height: 500px;
 }
 
-.hero-artesanato{
-  background-image: url('img/heroArtesanato.jpeg');
-  min-height: 250px;
-}
-
-.hero-picole{
-  background-image: url('img/picole.jpeg');
-  min-height: 250px;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 
 .hero-bg {
   background-size: cover;
@@ -145,7 +130,7 @@ body {
 }
 
 .cardAtv .title{
-  color: var(--orange);
+  color: var(--gold);
 }
 
 /*  EVENTOS (links nos cards) */
@@ -153,14 +138,11 @@ a .card:hover {
   border: 1px solid var(--celadon);
 }
 
-
-
 .imagem-sobre {
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
   height: 300px;
   width: 400px;
-
   display: block;
   margin: 0 auto; 
 }
@@ -173,6 +155,18 @@ a .card:hover {
   object-fit: cover;
   margin-bottom: 15px;
 }
+
+.imagem-info {
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  width: 300%;
+  height: 400px;
+  display: block;
+  margin: 0 auto; 
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
 
 /*  CTA */
 .cta {
