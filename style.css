@@ -107,6 +107,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 15px;
+  justify-content: center;
 }
 
 .card p {
@@ -121,7 +122,6 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
-
 
 
 /* TÍTULO DOS CARDS */
@@ -240,6 +240,20 @@ hr{
   margin: 10px auto;
 }
 
+.linha3{
+  border: none;
+  height: 1px;
+  width: 600px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--celadonDark),
+    transparent
+    );
+  margin: 10px auto;
+}
+
+
 
 /*  BOTÕES */
 .button{
@@ -288,7 +302,7 @@ hr{
 }
 
 /*paginas explicação*/
-.texto-artesanato {
+.texto-padrao {
   max-width: 900px;
   margin: 30px auto;
   padding: 30px 20px;
@@ -297,13 +311,17 @@ hr{
   color: #444;
 }
 
-.texto-artesanato h1 {
+.texto-padrao h1 {
   font-size: 32px;
   margin-bottom: 15px;
 }
 
 
-.texto-artesanato p {
+.texto-padrao p {
   margin-bottom: 16px;
   text-align: justify;
+}
+
+.link{
+  color:var(--dark)
 }
