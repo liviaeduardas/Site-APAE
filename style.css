@@ -18,7 +18,7 @@
 body {
   background-color: var(--porcelain2);
   color: var(--dark);
-  font-family: 'Open Sans', sans-serif;;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* NAVBAR */
@@ -90,12 +90,56 @@ body {
   padding: 3rem 1.5rem;
 }
 
+.swiper {
+  width: 700px; 
+  padding-bottom: 70px; 
+  margin: 0 auto;
+}
+
+
+.swiper-pagination {
+  bottom: -5px !important;
+}
 
 
 /*  CARDS */
 .cardAtv {
   background-color: var(--porcelain);
   margin: 30px;
+}
+
+.card-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.info-evento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  
+}
+
+.info-evento .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 180px;
+  height: 45px;
+
+  padding: 0;
+}
+
+.imagem-evento {
+  width: 250px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .card {
@@ -108,6 +152,7 @@ body {
   text-align: center;
   padding: 15px;
   justify-content: center;
+  margin: 10px;
 }
 
 .card p {
@@ -306,7 +351,7 @@ hr{
   max-width: 900px;
   margin: 30px auto;
   padding: 30px 20px;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.7;
   color: #444;
 }
