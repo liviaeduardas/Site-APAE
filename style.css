@@ -13,7 +13,7 @@
   --white: #FFFFFF;
 }
 
-/* BASE GERAL */
+/* BASE GERAL*/
 body {
   background-color: var(--porcelain2);
   color: var(--dark);
