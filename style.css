@@ -5,16 +5,16 @@
   --gold: #FED52D;
   --amareloClaro: #faf6dd;
   --porcelain: #F9FCFA;
-  --porcelain2:#F2F7F4;
-  --celadonClaro:#e4efe8;
+  --porcelain2: #f2f3f2;
   --celadon: #A9C9A5;
   --celadonDark: #8aa287;
   --silver: #CAC9C6;
+
   --dark: #7d7d7d;
   --white: #FFFFFF;
 }
 
-/* BASE GERAL*/
+/* BASE GERAL */
 body {
   background-color: var(--porcelain2);
   color: var(--dark);
@@ -23,13 +23,13 @@ body {
 
 /* NAVBAR */
 .navbar {
-  background-color: var(--celadonClaro);
+  background-color: var(--celadon);
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 
 }
 
 .navbar-item {
-  color: var(--celadonDark);
+  color: var(--porcelain);
   font-weight: 500;
 }
 
@@ -85,31 +85,20 @@ body {
 }
 
 
-
 /*  SEÇÕES */
 .section {
   padding: 3rem 1.5rem;
 }
 
 .swiper {
-  width: 800px; 
-  height: 200px;
-  padding-bottom: 50px; 
+  width: 700px; 
+  padding-bottom: 70px; 
   margin: 0 auto;
 }
 
 
 .swiper-pagination {
-  bottom: -5px
-}
-
-.swiper-pagination-bullet {
-  background: var(--silver);
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background: var(--gold)
+  bottom: -5px !important;
 }
 
 
@@ -148,57 +137,40 @@ body {
 
 .imagem-evento {
   width: 250px;
-  height: 120px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
 .card {
-  border-radius: 18px;
+  border-radius: 12px;
   transition: 0.3s;
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 0;
-  justify-content: center; 
+  padding: 15px;
+  justify-content: center;
   margin: 10px;
 }
 
-.card-servicos {
-   border-radius: 18px;
-  transition: 0.3s;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  overflow: hidden;
-  padding: 0;
-  background-color: var(--porcelain);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-
 .card p {
   flex-grow: 1;
-  line-height: 1.6;
+  min-height: 50px;
 }
-
 .card .title {
   margin-bottom: 10px;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 
 /* TÍTULO DOS CARDS */
 .card .title {
-  color: var(--celadon);
-}
-
-.card-servicos .title {
   color: var(--celadon);
 }
 
@@ -222,24 +194,17 @@ a .card:hover {
 
 .imagem-card {
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-.imagem-pix {
-  border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  height: 150px;
+  width: 300%;
+  height: 200px;
+  object-fit: cover;
   margin-bottom: 15px;
 }
 
 .imagem-info {
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  width: 100%;
+  width: 300%;
   height: 400px;
   display: block;
   margin: 0 auto; 
@@ -282,7 +247,6 @@ a .card:hover {
 .title  {
   font-family: 'Poppins', sans-serif;
   color: var(--orange);
-  font-weight: 550;
 }
 
 /* LINHAS */
@@ -338,7 +302,6 @@ hr{
 
 /*  BOTÕES */
 .button{
-  border-radius: 12px;
   background-color: var(--porcelain);
   color: var(--celadon);
   border: none;
@@ -376,7 +339,12 @@ hr{
   color: var(--porcelain);
 }
 
-
+/*  FOOTER */
+.footer {
+  background-color: var(--celadon);
+  color: var(--porcelain2);
+  padding: 15px;
+}
 
 /*paginas explicação*/
 .texto-padrao {
@@ -401,4 +369,55 @@ hr{
 
 .link{
   color:var(--dark)
+}
+
+/* HERO */
+.hero-banner{
+  width: 100%;
+  height: 500px;
+
+  background-image:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url('img/heroArtesanato.jpeg');
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1{
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+}
+
+.hero-content p{
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* SEÇÃO */
+.secao{
+  width: 96%;
+  margin: 70px auto;
+}
+
+/* RESPONSIVO */
+@media(max-width: 768px){
+
+  .hero-banner{
+    height: 350px;
+    padding: 20px;
+  }
+
+  .hero-content h1{
+    font-size: 2.5rem;
+  }
+
 }
