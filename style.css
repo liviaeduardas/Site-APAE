@@ -46,42 +46,45 @@ body {
 
 /*  HERO */
 
-.hero-home{
-  background-image: url('img/apaefoto.jpeg');
-  min-height: 500px;
-}
 
+.hero-banner{
+  width: 100%;
+  height: 500px;
 
-.hero-bg {
   background-size: cover;
   background-position: center;
-  position: relative;
-  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
 }
 
-.hero-home::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.6) 0%,
-    rgba(0,0,0,0.6) 40%,
-    rgba(0,0,0,0.6) 70%,
-    rgba(0,0,0,0.0) 100%
-  );
-  
+.hero-content h1{
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
 }
 
-.hero-bg .hero-body {
-  position: relative;
-  z-index: 2;
+.hero-content p{
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
-.hero .title,
-.hero .subtitle {
-  color: var(--porcelain);
+.horo-artesanato{
+  background-image:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url('img/heroArtesanato.jpeg');
+
+}
+
+.hero-home{
+  background-image:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url('img/apaefoto.jpeg');
+
 }
 
 
@@ -96,9 +99,18 @@ body {
   margin: 0 auto;
 }
 
-
 .swiper-pagination {
+  position: absolute;
   bottom: -5px !important;
+}
+
+.swiper-pagination-bullet {
+  background: var(--silver);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--gold)
 }
 
 
@@ -128,10 +140,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 180px;
   height: 45px;
-
   padding: 0;
 }
 
@@ -150,10 +160,24 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 15px;
-  justify-content: center;
-  margin: 10px;
+  padding: 20px;
+  justify-content: center; 
+  margin: 20px;
 }
+
+.card-servicos {
+  border-radius: 18px;
+  transition: 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  padding: 0;
+  background-color: var(--porcelain);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
 
 .card p {
   flex-grow: 1;
@@ -371,53 +395,9 @@ hr{
   color:var(--dark)
 }
 
-/* HERO */
-.hero-banner{
-  width: 100%;
-  height: 500px;
-
-  background-image:
-  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-  url('img/heroArtesanato.jpeg');
-
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-  color: white;
-}
-
-.hero-content h1{
-  font-size: 4rem;
-  font-weight: 700;
-  color: white;
-}
-
-.hero-content p{
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
 
 /* SEÇÃO */
 .secao{
   width: 96%;
   margin: 70px auto;
-}
-
-/* RESPONSIVO */
-@media(max-width: 768px){
-
-  .hero-banner{
-    height: 350px;
-    padding: 20px;
-  }
-
-  .hero-content h1{
-    font-size: 2.5rem;
-  }
-
 }
