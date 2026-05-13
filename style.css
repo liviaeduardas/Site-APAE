@@ -6,6 +6,7 @@
   --amareloClaro: #faf6dd;
   --porcelain: #F9FCFA;
   --porcelain2:#F2F7F4;
+  --celadonClaro:#e4efe8;
   --celadon: #A9C9A5;
   --celadonDark: #8aa287;
   --silver: #CAC9C6;
@@ -22,13 +23,13 @@ body {
 
 /* NAVBAR */
 .navbar {
-  background-color: var(--celadon);
+  background-color: var(--celadonClaro);
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 
 }
 
 .navbar-item {
-  color: var(--porcelain);
+  color: var(--celadonDark);
   font-weight: 500;
 }
 
@@ -84,14 +85,16 @@ body {
 }
 
 
+
 /*  SEÇÕES */
 .section {
   padding: 3rem 1.5rem;
 }
 
 .swiper {
-  width: 700px; 
-  padding-bottom: 70px; 
+  width: 800px; 
+  height: 200px;
+  padding-bottom: 50px; 
   margin: 0 auto;
 }
 
@@ -150,34 +153,52 @@ body {
 }
 
 .card {
-  border-radius: 12px;
+  border-radius: 18px;
   transition: 0.3s;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-  padding: 15px;
-  justify-content: center;
+  padding: 0;
+  justify-content: center; 
   margin: 10px;
 }
 
+.card-servicos {
+   border-radius: 18px;
+  transition: 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  padding: 0;
+  background-color: var(--porcelain);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+
 .card p {
   flex-grow: 1;
-  min-height: 50px;
+  line-height: 1.6;
 }
+
 .card .title {
   margin-bottom: 10px;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
 
 
 /* TÍTULO DOS CARDS */
 .card .title {
+  color: var(--celadon);
+}
+
+.card-servicos .title {
   color: var(--celadon);
 }
 
@@ -201,9 +222,9 @@ a .card:hover {
 
 .imagem-card {
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  width: 300%;
-  height: 200px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+  width: 100%;
+  height: 220px;
   object-fit: cover;
   margin-bottom: 15px;
 }
@@ -218,7 +239,7 @@ a .card:hover {
 .imagem-info {
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  width: 300%;
+  width: 100%;
   height: 400px;
   display: block;
   margin: 0 auto; 
@@ -317,6 +338,7 @@ hr{
 
 /*  BOTÕES */
 .button{
+  border-radius: 12px;
   background-color: var(--porcelain);
   color: var(--celadon);
   border: none;
@@ -354,12 +376,7 @@ hr{
   color: var(--porcelain);
 }
 
-/*  FOOTER */
-.footer {
-  background-color: var(--celadon);
-  color: var(--porcelain2);
-  padding: 15px;
-}
+
 
 /*paginas explicação*/
 .texto-padrao {
