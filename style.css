@@ -46,42 +46,45 @@ body {
 
 /*  HERO */
 
-.hero-home{
-  background-image: url('img/apaefoto.jpeg');
-  min-height: 500px;
-}
 
+.hero-banner{
+  width: 100%;
+  height: 500px;
 
-.hero-bg {
   background-size: cover;
   background-position: center;
-  position: relative;
-  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
 }
 
-.hero-home::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.6) 0%,
-    rgba(0,0,0,0.6) 40%,
-    rgba(0,0,0,0.6) 70%,
-    rgba(0,0,0,0.0) 100%
-  );
-  
+.hero-content h1{
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
 }
 
-.hero-bg .hero-body {
-  position: relative;
-  z-index: 2;
+.hero-content p{
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
-.hero .title,
-.hero .subtitle {
-  color: var(--porcelain);
+.horo-artesanato{
+  background-image:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url('img/heroArtesanato.jpeg');
+
+}
+
+.hero-home{
+  background-image:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url('img/apaefoto.jpeg');
+
 }
 
 
@@ -98,9 +101,9 @@ body {
   margin: 0 auto;
 }
 
-
 .swiper-pagination {
-  bottom: -5px
+  position: absolute;
+  bottom: -5px !important;
 }
 
 .swiper-pagination-bullet {
@@ -139,10 +142,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 180px;
   height: 45px;
-
   padding: 0;
 }
 
@@ -159,13 +160,13 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 0;
+  padding: 20px;
   justify-content: center; 
-  margin: 10px;
+  margin: 20px;
 }
 
 .card-servicos {
-   border-radius: 18px;
+  border-radius: 18px;
   transition: 0.3s;
   height: 100%;
   display: flex;
@@ -401,4 +402,11 @@ hr{
 
 .link{
   color:var(--dark)
+}
+
+
+/* SEÇÃO */
+.secao{
+  width: 96%;
+  margin: 70px auto;
 }
