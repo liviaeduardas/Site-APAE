@@ -73,11 +73,10 @@ body {
   margin-top: 10px;
 }
 
-.horo-artesanato{
-  background-image:
+.hero-artesanato{
+   background-image:
   linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
   url('img/heroArtesanato.jpeg');
-
 }
 
 .hero-home{
@@ -96,7 +95,6 @@ body {
 
 .swiper {
   width: 800px; 
-  height: 200px;
   padding-bottom: 50px; 
   margin: 0 auto;
 }
