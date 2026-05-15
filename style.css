@@ -73,10 +73,23 @@ body {
   margin-top: 10px;
 }
 
-.horo-artesanato{
+.hero-artesanato{
   background-image:
   linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
   url('img/heroArtesanato.jpeg');
+}
+
+.hero-horta{
+  background-image:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url('img/horta1.jpg');
+
+}
+
+.hero-picole{
+  background-image:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url('img/picole1.jpg');
 
 }
 
@@ -193,6 +206,10 @@ body {
   box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
 
+.card .column {
+  display: flex;
+  align-items: center;
+}
 
 /* TÍTULO DOS CARDS */
 .card .title {
@@ -240,10 +257,13 @@ a .card:hover {
 .imagem-info {
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+
   width: 100%;
-  height: 400px;
+  height: 320px;
+
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
+
   object-fit: cover;
   margin-bottom: 15px;
 }
@@ -300,13 +320,17 @@ hr{
 
 .linha1{
   border: none;
-  height: 1px;
+  height: 2px;
+  width: 220px;
+
   background: linear-gradient(
     to right,
+    transparent,
     var(--orange),
     transparent
-    );
-  width: 300px;
+  );
+
+  margin: 15px auto 30px auto;
 }
 
 .linha2{
@@ -409,4 +433,35 @@ hr{
 .secao{
   width: 96%;
   margin: 70px auto;
+}
+
+/* GALERIA */
+
+.galeria-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.galeria-card{
+  width: 320px;
+  background-color: var(--porcelain);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.galeria-card:hover{
+  transform: translateY(-5px);
+}
+
+.imagem-galeria{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
 }
