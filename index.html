@@ -59,14 +59,14 @@
         A APAE busca garantir os direitos das pessoas com deficiência e representar seus interesses em diferentes níveis
       </p>
     </div>
-    
+
   </section>
 
-  
+
 
   <!--  SOBRE -->
   <section id="sobre" class="cta">
-  </div>
+    </div>
     <div class="container">
       <div class="columns is-vcentered">
 
@@ -165,7 +165,6 @@
       <div class="swiper">
 
         <div class="swiper-wrapper">
-
           <!-- CARD 1 -->
           <div class="swiper-slide">
             <div class="card card-mexe">
@@ -175,7 +174,7 @@
 
                 <div class="info-evento">
                   <p class="title is-5">Campanha do Café</p>
-                  <a class="button">Saiba Mais</a>
+                  <a href="cafe.html" class="button">Saiba Mais</a>
                 </div>
 
               </div>
@@ -310,12 +309,28 @@
 
     <script>
       const swiper = new Swiper('.swiper', {
-        loop: true,
+
+        slidesPerView: 1,
+        spaceBetween: 20,
+
+        breakpoints: {
+
+          768: {
+            slidesPerView: 2,
+          },
+
+          1024: {
+            slidesPerView: 2,
+          }
+
+        },
 
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
         },
+
+        loop: true,
       });
     </script>
 

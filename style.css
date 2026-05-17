@@ -94,6 +94,13 @@ body {
 
 }
 
+.hero-cafe{
+  background-image:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url('img/cafe.jpg');
+
+}
+
 .hero-home{
   background-image:
   linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
@@ -109,9 +116,11 @@ body {
 }
 
 .swiper {
-  width: 800px; 
-  padding-bottom: 50px; 
-  margin: 0 auto;
+  padding: 20px 10px 50px;
+}
+
+.swiper-slide{
+  height: auto;
 }
 
 .swiper-pagination {
@@ -151,6 +160,10 @@ body {
   
 }
 
+.texto-info{
+  text-align: left;
+}
+
 .info-evento .button {
   display: flex;
   align-items: center;
@@ -173,13 +186,15 @@ body {
 .card {
   border-radius: 18px;
   transition: 0.3s;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 15px;
   justify-content: center; 
   margin: 20px;
+ background-color: var(--porcelain);
+
 }
 
 .card-servicos {
@@ -197,6 +212,7 @@ body {
 }
 
 
+
 .card p {
   flex-grow: 1;
   line-height: 1.6;
@@ -205,6 +221,7 @@ body {
 .card .title {
   margin-bottom: 10px;
 }
+
 
 .card-mexe:hover {
   transform: translateY(-8px);
@@ -404,6 +421,11 @@ hr{
   padding: 10px 0;
 }
 
+.card-mexe .button{
+  background-color: var(--celadon);
+  color: var(--porcelain);
+}
+
 .cta4 .button{
   background-color: var(--porcelain);
   color: var(--celadon);
@@ -414,6 +436,11 @@ hr{
   text-align: center;
   padding: 6px 0;
   font-size: 12px;
+}
+
+
+.card-mexe .button:hover {
+  background-color: var(--celadonDark);
 }
 
 .button:hover {
@@ -495,4 +522,13 @@ hr{
   height: 250px;
   object-fit: cover;
   display: block;
+}
+
+.icon.is-large{
+  color: var(--celadon);
+  margin-bottom: 15px;
+}
+
+.columns.is-vcentered{
+  align-items: center;
 }
