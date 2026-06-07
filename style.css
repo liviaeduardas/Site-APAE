@@ -1,37 +1,79 @@
-/*  VARIÁVEIS DE COR */
+/* ============================================================
+   APAE DE ILICÍNEA — style.css
+   ============================================================
+   Seções:
+   01. Variáveis
+   02. Base
+   03. Navbar
+   04. Hero
+   05. Seções de conteúdo
+   06. Títulos
+   07. Cards genéricos
+   08. Cards de serviços (home)
+   09. Cards de eventos (carrossel)
+   10. Imagens
+   11. Galeria
+   12. Botões
+   13. Linhas decorativas
+   14. Carrossel Swiper
+   15. Texto corrido (voluntários, doação)
+   16. Utilitários
+   ============================================================ */
+
+
+/* ============================================================
+   01. VARIÁVEIS
+   ============================================================ */
 :root {
-  --orange: #F6AA3C;
-  --verdeClaro:#e2f4df;
-  --gold: #FED52D;
-  --amareloClaro: #faf6dd;
-  --porcelain: #F9FCFA;
-  --porcelain2:#F2F7F4;
-  --celadonClarissimo:#eff4f1;
-  --celadonClaro:#e4efe8;
-  --celadon: #A9C9A5;
-  --celadonDark: #8aa287;
-  --silver: #CAC9C6;
-  --dark: #7d7d7d;
-  --white: #FFFFFF;
+  /* Cores principais */
+  --orange:        #F6AA3C;
+  --gold:          #FED52D;
+
+  /* Verde (paleta principal) */
+  --verde-claro:   #e2f4df;
+  --celadon-pale:  #eff4f1;   /* fundo seção alternada */
+  --celadon-soft:  #e4efe8;   /* fundo navbar */
+  --celadon:       #A9C9A5;
+  --celadon-dark:  #8aa287;
+
+  /* Neutros */
+  --porcelain:     #F9FCFA;   /* fundo seção principal / cards */
+  --porcelain2:    #F2F7F4;   /* fundo body */
+  --silver:        #CAC9C6;
+  --dark:          #7d7d7d;
+  --white:         #FFFFFF;
+
+  /* Espaçamento padrão de seção */
+  --section-padding: 3rem 2rem;
 }
 
-/* BASE GERAL*/
+
+/* ============================================================
+   02. BASE
+   ============================================================ */
 body {
   background-color: var(--porcelain2);
   color: var(--dark);
   font-family: 'Open Sans', sans-serif;
 }
 
-/* NAVBAR */
-.navbar {
-  background-color: var(--celadonClaro);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 
+/* ============================================================
+   03. NAVBAR
+   ============================================================ */
+.navbar {
+  background-color: var(--celadon-soft);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .navbar-item {
-  color: var(--celadonDark);
+  color: var(--celadon-dark);
   font-weight: 500;
+}
+
+.navbar-item:hover {
+  color: var(--orange) !important;
+  background-color: var(--porcelain2) !important;
 }
 
 .imagem-logo {
@@ -40,86 +82,413 @@ body {
   display: block;
 }
 
-.navbar .navbar-item:hover {
-  color: var(--orange);
-  background-color: var(--porcelain2);
-}
 
-/*  HERO */
-
-
-.hero-banner{
+/* ============================================================
+   04. HERO BANNER
+   ============================================================ */
+.hero-banner {
   width: 100%;
   height: 500px;
-
   background-size: cover;
   background-position: center;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-align: center;
-  color: white;
+  color: var(--white);
 }
 
-.hero-content h1{
+.hero-content h1 {
   font-size: 4rem;
   font-weight: 700;
-  color: white;
+  color: var(--white);
 }
 
-.hero-content p{
+.hero-content p {
   font-size: 1.2rem;
   margin-top: 10px;
 }
 
-.hero-artesanato{
+.hero-home {
   background-image:
-  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-  url('img/artesanatoGoogle.jpg');
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('img/apaefoto.jpeg');
 }
 
-.hero-horta{
+.hero-artesanato {
   background-image:
-  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-  url('img/hortaGoogle.avif');
-
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('img/artesanatoGoogle.jpg');
 }
 
-.hero-picole{
+.hero-horta {
   background-image:
-  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-  url('img/picoleGoogle.jpg');
-
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('img/hortaGoogle.avif');
 }
 
-.hero-cafe{
+.hero-picole {
   background-image:
-  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-  url('img/cafe.jpg');
-
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('img/picoleGoogle.jpg');
 }
 
-.hero-home{
+.hero-cafe {
   background-image:
-  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-  url('img/apaefoto.jpeg');
-
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('img/cafe.jpg');
 }
 
 
-
-/*  SEÇÕES */
-.section {
-  padding: 3rem 1.5rem;
+/* ============================================================
+   05. SEÇÕES DE CONTEÚDO
+   
+   .section-branca  → fundo branco/porcelana  (seções "claras")
+   .section-verde   → fundo verde-pálido      (seções "alternadas")
+   .section-destaque → fundo verde-claro, CTA de doação/voluntário
+   ============================================================ */
+.section-branca {
+  background-color: var(--porcelain);
+  padding: var(--section-padding);
 }
 
+.section-verde {
+  background-color: var(--celadon-pale);
+  padding: var(--section-padding);
+}
+
+.section-verde p {
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
+.section-destaque {
+  background-color: var(--verde-claro);
+  padding: 2rem;
+  text-align: center;
+}
+
+.section-destaque .title {
+  color: var(--celadon-dark);
+}
+
+
+/* ============================================================
+   06. TÍTULOS
+   ============================================================ */
+.title {
+  font-family: 'Poppins', sans-serif;
+  color: var(--orange);
+  font-weight: 550;
+}
+
+
+/* ============================================================
+   07. CARDS GENÉRICOS
+   Usados nas páginas internas (artesanato, horta, picolé, doação)
+   ============================================================ */
+.card {
+  background-color: var(--porcelain);
+  border-radius: 18px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card .title {
+  color: var(--celadon);
+  margin-bottom: 10px;
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+/* Colunas dentro de card ficam verticalmente centralizadas */
+.card .column {
+  display: flex;
+  align-items: center;
+}
+
+/* Texto alinhado à esquerda nos cards informativos */
+.texto-info {
+  text-align: left;
+}
+
+/* Card com hover (eventos da home, café) */
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ============================================================
+   08. CARDS DE SERVIÇOS (home)
+   ============================================================ */
+.card-servicos {
+  background-color: var(--porcelain);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  padding: 0;
+  height: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-servicos .title {
+  color: var(--celadon);
+}
+
+.card-servicos:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ============================================================
+   09. CARDS DE EVENTOS (carrossel)
+   ============================================================ */
+.card-evento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.info-evento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-evento .button {
+  width: 180px;
+  height: 45px;
+}
+
+/* alias mantido para compatibilidade com Bulma card-content */
+.card-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* card-mexe = card com hover (usado nas páginas atuais) */
+.card-mexe:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-mexe .button {
+  background-color: var(--celadon);
+  color: var(--porcelain);
+}
+
+.card-mexe .button:hover {
+  background-color: var(--celadon-dark);
+}
+
+
+/* ============================================================
+   10. IMAGENS
+   ============================================================ */
+.imagem-sobre {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.imagem-card {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: brightness(70%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+}
+
+.imagem-info {
+  width: 90%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: brightness(70%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.imagem-evento {
+  width: 350px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: brightness(70%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+}
+
+.imagem-pix {
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+
+/* ============================================================
+   11. GALERIA
+   ============================================================ */
+.galeria-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.galeria-card {
+  width: 320px;
+  background-color: var(--porcelain);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s;
+}
+
+.galeria-card:hover {
+  transform: translateY(-5px);
+}
+
+.imagem-galeria {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  filter: brightness(70%);
+  display: block;
+}
+
+
+/* ============================================================
+   12. BOTÕES
+   ============================================================ */
+.button {
+  border-radius: 12px;
+  background-color: var(--porcelain);
+  color: var(--celadon);
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  padding: 10px 0;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: var(--porcelain2);
+}
+
+.button.is-warning {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.button.is-warning:hover {
+  background-color: #e09530;
+}
+
+.button.is-light {
+  background-color: var(--gold);
+  color: var(--porcelain);
+}
+
+.button.is-light:hover {
+  background-color: #e8c125;
+}
+
+
+/* ============================================================
+   13. LINHAS DECORATIVAS
+   
+   .linha-curta    → alinhada à esquerda, subtítulos de seção
+   .linha-media    → centralizada, CTA e separações
+   .linha-longa    → centralizada, doação e voluntários
+   .linha-galeria  → centralizada, separação da galeria
+   ============================================================ */
+.linha-curta,
+.linha-media,
+.linha-longa,
+.linha-galeria {
+  border: none;
+  height: 1px;
+}
+
+.linha-curta {
+  width: 220px;
+  margin-left: 0;
+  background: linear-gradient(to right, var(--gold), var(--orange), transparent);
+}
+
+.linha-media {
+  width: 300px;
+  margin: 10px auto;
+  background: linear-gradient(to right, transparent, var(--celadon-dark), transparent);
+}
+
+.linha-longa {
+  width: 600px;
+  margin: 10px auto;
+  background: linear-gradient(to right, transparent, var(--celadon-dark), transparent);
+}
+
+.linha-galeria {
+  width: 220px;
+  margin: 15px auto 30px;
+  background: linear-gradient(to right, transparent, var(--orange), transparent);
+}
+
+/* Aliases mantidos para não quebrar HTMLs existentes */
+.linha1 { width: 220px; margin-left: 0;     background: linear-gradient(to right, var(--gold), var(--orange), transparent); }
+.linha2 { width: 300px; margin: 10px auto;  background: linear-gradient(to right, transparent, var(--celadon-dark), transparent); }
+.linha3 { width: 600px; margin: 10px auto;  background: linear-gradient(to right, transparent, var(--celadon-dark), transparent); }
+.linha4 { width: 220px; margin: 15px auto 30px; background: linear-gradient(to right, transparent, var(--orange), transparent); }
+.linha1, .linha2, .linha3, .linha4 { border: none; height: 1px; }
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, var(--celadon), transparent);
+}
+
+
+/* ============================================================
+   14. CARROSSEL SWIPER
+   ============================================================ */
 .swiper {
   padding: 20px 10px 50px;
 }
 
-.swiper-slide{
+.swiper-slide {
   height: auto;
 }
 
@@ -134,333 +503,13 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--gold)
+  background: var(--gold);
 }
 
 
-/*  CARDS */
-.cardAtv {
-  background-color: var(--porcelain);
-  margin: 30px;
-}
-
-.card-conteudo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-}
-
-.info-evento {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  
-}
-
-.texto-info{
-  text-align: left;
-}
-
-.info-evento .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 180px;
-  height: 45px;
-  padding: 0;
-}
-
-.imagem-evento {
-  width: 350px;
-  height: 150px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
-  
-  margin-bottom: 15px;
-  filter: brightness(70%);
-}
-
-.card {
-  border-radius: 18px;
-  transition: 0.3s;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 15px;
-  justify-content: center; 
-  margin: 20px;
- background-color: var(--porcelain);
-
-}
-
-.card-servicos {
-  border-radius: 18px;
-  transition: 0.3s;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  overflow: hidden;
-  padding: 0;
-  gap: 20px;
-  background-color: var(--porcelain);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-
-
-.card p {
-  flex-grow: 1;
-  line-height: 1.6;
-}
-
-.card .title {
-  margin-bottom: 10px;
-}
-
-
-.card-mexe:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-}
-
-.card-servicos:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-}
-
-.card .column {
-  display: flex;
-  align-items: center;
-}
-
-/* TÍTULO DOS CARDS */
-.card .title {
-  color: var(--celadon);
-}
-
-.card-servicos .title {
-  color: var(--celadon);
-}
-
-
-.cardAtv .title{
-  color: var(--gold);
-}
-
-/*  EVENTOS (links nos cards) */
-a .card:hover {
-  border: 1px solid var(--celadon);
-}
-
-.imagem-sobre {
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  height: 300px;
-  width: 400px;
-  display: block;
-  margin: 0 auto; 
-}
-
-.imagem-card {
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 15px;
-  filter: brightness(70%);
-  
-}
-
-
-.imagem-pix {
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  height: 150px;
-  margin-bottom: 15px;
-}
-
-.imagem-info {
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  filter: brightness(70%);
-  width: 90%;
-  height: 300px;
-
-  display: block;
-  margin: 0 auto;
-
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-
-/*  CTA */
-.cta {
-  background-color: var(--porcelain);
-  color: var(--dark);
-  padding: 3rem 2rem;
-}
-
-.cta2{
-  background-color: var(--celadonClarissimo);
-  padding: 3rem 2rem;
-}
-
-.cta2 p{
-  color: var(--dark);
-  margin-bottom: 15px;
-}
-
-.cta3{
-  background-color: var(--verdeClaro);
-  padding: 2rem 2rem;
-}
-
-.cta3 .title {
-  color: var(--celadonDark);
-}
-
-.cta4{
-
-  padding: 10px;
-}
-
-.title  {
-  font-family: 'Poppins', sans-serif;
-  color: var(--orange);
-  font-weight: 550;
-}
-
-
-/* LINHAS */
-
-hr{
-  border: none;
-  height: 1px;
-   background: linear-gradient(
-    to right,
-    var(--celadon),
-    transparent
-    );
-}
-
-.linha1{
-  border: none;
-  height: 1px;
-  width: 220px;
-  background: linear-gradient(
-    to right,
-    var(--gold),
-    var(--orange),
-    transparent
-  );
-  margin-left: 0;
-  
-}
-
-
-.linha4{
-  border: none;
-  height: 1px;
-  width: 220px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--orange),
-    transparent
-  );
-  margin: 15px auto 30px auto;
-
-}
-
-
-.linha2{
-  border: none;
-  height: 1px;
-  width: 300px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--celadonDark),
-    transparent
-    );
-  margin: 10px auto;
-}
-
-.linha3{
-  border: none;
-  height: 1px;
-  width: 600px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--celadonDark),
-    transparent
-    );
-  margin: 10px auto;
-}
-
-
-
-/*  BOTÕES */
-.button{
-  border-radius: 12px;
-  background-color: var(--porcelain);
-  color: var(--celadon);
-  border: none;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  display: inline-block;
-  width: 180px;       
-  text-align: center;
-  padding: 10px 0;
-}
-
-.card-mexe .button{
-  background-color: var(--celadon);
-  color: var(--porcelain);
-}
-
-.cta4 .button{
-  background-color: var(--porcelain);
-  color: var(--celadon);
-  border: none;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  display: inline-block;
-  width: 130px;       
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-}
-
-
-.card-mexe .button:hover {
-  background-color: var(--celadonDark);
-}
-
-.button:hover {
-  background-color: var(--porcelain2);
-}
-
-.button.is-warning {
-  background-color: var(--orange);
-  color: var(--white);
-}
-
-
-.button.is-light {
-  background-color: var(--gold);
-  color: var(--porcelain);
-}
-
-
-
-/*paginas explicação*/
+/* ============================================================
+   15. TEXTO CORRIDO (voluntários, doação)
+   ============================================================ */
 .texto-padrao {
   max-width: 900px;
   margin: 30px auto;
@@ -475,60 +524,24 @@ hr{
   margin-bottom: 15px;
 }
 
-
 .texto-padrao p {
   margin-bottom: 16px;
   text-align: justify;
 }
 
-.link{
-  color:var(--dark)
+
+/* ============================================================
+   16. UTILITÁRIOS
+   ============================================================ */
+.link {
+  color: var(--dark);
 }
 
-
-/* SEÇÃO */
-.secao{
-  width: 96%;
-  margin: 70px auto;
-}
-
-/* GALERIA */
-
-.galeria-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.galeria-card{
-  width: 320px;
-  background-color: var(--porcelain);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-  transition: 0.3s;
-}
-
-.galeria-card:hover{
-  transform: translateY(-5px);
-}
-
-.imagem-galeria{
-  filter: brightness(70%);
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-}
-
-.icon.is-large{
+.icon.is-large {
   color: var(--celadon);
   margin-bottom: 15px;
 }
 
-.columns.is-vcentered{
+.columns.is-vcentered {
   align-items: center;
 }
