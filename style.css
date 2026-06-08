@@ -150,6 +150,7 @@ body {
 .section-branca {
   background-color: var(--porcelain);
   padding: var(--section-padding);
+  
 }
 
 .section-verde {
@@ -197,7 +198,19 @@ body {
   justify-content: center;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  
 }
+
+/* Cards do impacto com mesma altura */
+.columns {
+    align-items: stretch;
+}
+
+.columns .column-card {
+    display: flex;
+}
+
+
 
 .card .title {
   color: var(--celadon);
