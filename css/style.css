@@ -112,31 +112,43 @@ body {
 .hero-home {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url('img/apaefoto.jpeg');
+    url('../img/apaefoto.jpeg');
 }
 
 .hero-artesanato {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url('img/artesanatoGoogle.jpg');
+    url('../img/artesanatoGoogle.jpg');
 }
 
 .hero-horta {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url('img/hortaGoogle.avif');
+    url('../img/hortaGoogle.avif');
 }
 
 .hero-picole {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url('img/picoleGoogle.jpg');
+    url('../img/picoleGoogle.jpg');
 }
 
 .hero-cafe {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url('img/cafe.jpg');
+    url('../img/cafe.jpg');
+}
+
+.hero-moto {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('../img/heroMoto.jpg');
+}
+
+.hero-leilao {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('../img/leilao.jpg');
 }
 
 
@@ -201,6 +213,15 @@ body {
   
 }
 
+.card-doacao {
+    height: 100%;
+    width: 100%;
+
+}
+
+    
+
+
 /* Cards do impacto com mesma altura */
 .columns {
     align-items: stretch;
@@ -210,7 +231,15 @@ body {
     display: flex;
 }
 
+.card-doacao{
+    position: relative;
+}
 
+.icone-card{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
 
 .card .title {
   color: var(--celadon);
