@@ -151,6 +151,18 @@ body {
     url('../img/leilao.jpg');
 }
 
+.hero-festaJunina {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('../img/festaJuninaHero.jpg');
+}
+
+.hero-truco {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('../img/trucoHero.jpg');
+}
+
 
 /* ============================================================
    05. SEÇÕES DE CONTEÚDO
