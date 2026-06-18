@@ -104,6 +104,20 @@ body {
   color: var(--white);
 }
 
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 350px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
 .hero-content p {
   font-size: 1.2rem;
   margin-top: 10px;
@@ -183,6 +197,11 @@ body {
 }
 
 .section-verde p {
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
+.section-branca p {
   color: var(--dark);
   margin-bottom: 15px;
 }
@@ -339,6 +358,17 @@ body {
   padding: 20px;
 }
 
+@media (max-width: 768px) {
+  .card-conteudo {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info-evento .button {
+    width: 140px;
+  }
+}
+
 /* card-mexe = card com hover (usado nas páginas atuais) */
 .card-mexe:hover {
   transform: translateY(-8px);
@@ -362,9 +392,11 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   height: 300px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   display: block;
   margin: 0 auto;
+  object-fit: cover;
 }
 
 .imagem-card {
@@ -389,7 +421,8 @@ body {
 }
 
 .imagem-evento {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 150px;
   border-radius: 10px;
   object-fit: cover;
@@ -511,6 +544,7 @@ body {
 
 .linha-longa {
   width: 600px;
+  max-width: 90%;
   margin: 10px auto;
   background: linear-gradient(to right, transparent, var(--celadon-dark), transparent);
 }
@@ -524,7 +558,7 @@ body {
 /* Aliases mantidos para não quebrar HTMLs existentes */
 .linha1 { width: 220px; margin-left: 0;     background: linear-gradient(to right, var(--gold), var(--orange), transparent); }
 .linha2 { width: 300px; margin: 10px auto;  background: linear-gradient(to right, transparent, var(--celadon-dark), transparent); }
-.linha3 { width: 600px; margin: 10px auto;  background: linear-gradient(to right, transparent, var(--celadon-dark), transparent); }
+.linha3 { width: 600px; max-width: 90%; margin: 10px auto;  background: linear-gradient(to right, transparent, var(--celadon-dark), transparent); }
 .linha4 { width: 220px; margin: 15px auto 30px; background: linear-gradient(to right, transparent, var(--orange), transparent); }
 .linha1, .linha2, .linha3, .linha4 { border: none; height: 1px; }
 
