@@ -19,36 +19,27 @@
 <body>
 
   <!-- HEADER -->
-  <nav class="navbar">
-
+  <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-
       <a class="navbar-item">
         <img src="../img/logo-APAE.png" class="imagem-logo">
       </a>
 
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
 
-    <div class="navbar-menu">
-
+    <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
-
-        <a href="../index.html" class="navbar-item">
-          Home
-        </a>
-
-        <a href="#ajuda" class="navbar-item">
-          Como Ajudar
-        </a>
-
-        <a href="#contato" class="navbar-item">
-          Contato
-        </a>
-
+        <a href="../index.html" class="navbar-item">Home</a>
+        <a href="#ajuda" class="navbar-item">Como Ajudar</a>
+        <a href="#contato" class="navbar-item">Contato</a>
       </div>
-
     </div>
-
+  </nav>
   </nav>
 
   <!-- HERO -->
@@ -78,7 +69,7 @@
 
         <div class="column is-6">
 
-          <img src="../img/horta_card1.jpeg" class="imagem-info">
+          <img src="../img/plantas.jpeg" class="imagem-info">
 
         </div>
 
@@ -145,7 +136,7 @@
 
         <div class="column is-6">
 
-          <img src="../img/horta_card2.jpeg" class="imagem-info">
+          <img src="../img/hortaPlanta.jpeg" class="imagem-info">
 
         </div>
 
@@ -155,30 +146,14 @@
 
   </section>
 
-  <section class="section-verde">
-    <!-- GALERIA -->
-    <div class="card">
 
-      <h2 class="title">
-        Veja Como Funciona
-      </h2>
-
-      <hr class="linha4">
-
-      <div class="galeria-container">
-
-        <div class="galeria-card">
-          <img src="../img/heroArtesanato.jpeg" class="imagem-galeria">
-        </div>
-
-        <div class="galeria-card">
-          <img src="../img/heroArtesanato.jpeg" class="imagem-galeria">
-        </div>
-
-      </div>
-
-    </div>
+  <section class="section-verde has-text-centered">
+    <p>
+      <i class="fa-solid fa-seedling fa-1x"></i>
+      Contato com a natureza e aprendizado sobre o cuidado com as plantas!
+    </p>
   </section>
+
 
   <!-- CTA -->
   <section id="ajuda" class="section-destaque">
@@ -298,6 +273,17 @@
     </div>
 
   </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.getElementById(burger.dataset.target);
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    });
+  </script>
 
 </body>
 

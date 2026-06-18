@@ -18,36 +18,26 @@
 
 <body>
 
-    <nav class="navbar">
-
+    <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-
             <a class="navbar-item">
                 <img src="../img/logo-APAE.png" class="imagem-logo">
             </a>
 
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
 
-        <div class="navbar-menu">
-
+        <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
-
-                <a href="../index.html" class="navbar-item">
-                    Home
-                </a>
-
-                <a href="#ajuda" class="navbar-item">
-                    Como Ajudar
-                </a>
-
-                <a href="#contato" class="navbar-item">
-                    Contato
-                </a>
-
+                <a href="../index.html" class="navbar-item">Home</a>
+                <a href="#ajuda" class="navbar-item">Como Ajudar</a>
+                <a href="#contato" class="navbar-item">Contato</a>
             </div>
-
         </div>
-
     </nav>
 
     <!-- HERO -->
@@ -357,6 +347,18 @@
         </div>
 
     </section>
+
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.getElementById(burger.dataset.target);
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+            });
+        });
+  </script>
+
 </body>
 
 </html>

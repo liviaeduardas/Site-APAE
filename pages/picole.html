@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APAE -  Picolés</title>
+  <title>APAE - Picolés</title>
 
   <!-- Bulma -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -18,37 +18,27 @@
 
 <body>
 
-  <!-- HEADER -->
-  <nav class="navbar">
 
+  <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-
       <a class="navbar-item">
         <img src="../img/logo-APAE.png" class="imagem-logo">
       </a>
 
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
 
-    <div class="navbar-menu">
-
+    <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
-
-        <a href="index.html" class="navbar-item">
-          Home
-        </a>
-
-        <a href="#ajuda" class="navbar-item">
-          Como Ajudar
-        </a>
-
-        <a href="#contato" class="navbar-item">
-          Contato
-        </a>
-
+        <a href="../index.html" class="navbar-item">Home</a>
+        <a href="#ajuda" class="navbar-item">Como Ajudar</a>
+        <a href="#contato" class="navbar-item">Contato</a>
       </div>
-
     </div>
-
   </nav>
 
   <!-- HERO -->
@@ -78,7 +68,7 @@
 
         <div class="column is-6">
 
-          <img src="../img/picole_card1.jpeg" class="imagem-info">
+          <img src="../img/picole2.jpeg" class="imagem-info">
 
         </div>
 
@@ -146,7 +136,7 @@
 
         <div class="column is-6">
 
-          <img src="../img/picole_card2.jpeg" class="imagem-info">
+          <img src="../img/picole1.jpeg" class="imagem-info">
 
         </div>
 
@@ -156,33 +146,16 @@
 
   </section>
 
-  <section class="section-verde">
-    <!-- GALERIA -->
-    <div class="card">
-
-      <h2 class="title">
-        Veja Como Funciona
-      </h2>
 
 
-      <hr class="linha4">
+  <section class="section-verde has-text-centered">
 
-      <div class="galeria-container">
-
-        <div class="galeria-card">
-          <img src="../img/heroArtesanato.jpeg" class="imagem-galeria">
-        </div>
-
-        <div class="galeria-card">
-          <img src="../img/heroArtesanato.jpeg" class="imagem-galeria">
-        </div>
-
-      </div>
-
-    </div>
-
-    </div>
+    <p>
+      <i class="fa-solid fa-ice-cream fa-1x"></i>
+      Atividade que desenvolve habilidades profissionais, responsabilidade e autonomia por meio da produção de picolés!
+    </p>
   </section>
+
 
   <!-- CTA -->
   <section id="ajuda" class="section-destaque">
@@ -303,6 +276,16 @@
 
   </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.getElementById(burger.dataset.target);
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    });
+  </script>
 
 </body>
 
