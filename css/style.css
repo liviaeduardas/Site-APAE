@@ -5,22 +5,22 @@
    ============================================================ */
 :root {
   /* Cores principais */
-  --orange:        #F6AA3C;
-  --gold:          #FED52D;
+  --orange: #F6AA3C;
+  --gold: #FED52D;
 
   /* Verde (paleta principal) */
-  --verde-claro:   #e2f4df;
-  --celadon-pale:  #eff4f1;   /* fundo seção alternada */
-  --celadon-soft:  #e4efe8;   /* fundo navbar */
-  --celadon:       #A9C9A5;
-  --celadon-dark:  #8aa287;
+  --verde-claro: #e2f4df;
+  --celadon-pale: #eff4f1;   /* fundo seção alternada */
+  --celadon-soft:#e4efe8;   /* fundo navbar */
+  --celadon: #A9C9A5;
+  --celadon-dark: #8aa287;
 
   /* Neutros */
-  --porcelain:     #F9FCFA;   /* fundo seção principal / cards */
-  --porcelain2:    #F2F7F4;   /* fundo body */
-  --silver:        #CAC9C6;
-  --dark:          #7d7d7d;
-  --white:         #FFFFFF;
+  --porcelain: #F9FCFA;   /* fundo seção principal / cards */
+  --porcelain2: #F2F7F4;   /* fundo body */
+  --silver: #CAC9C6;
+  --dark: #7d7d7d;
+  --white: #FFFFFF;
 
   /* Espaçamento padrão de seção */
   --section-padding: 3rem 2rem;
@@ -399,6 +399,15 @@ body {
   margin: 0 auto 15px;
 }
 
+.imagem-despesa {
+  width: 90%;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto 15px;
+}
+
 .imagem-evento {
   width: 100%;
   max-width: 350px;
@@ -570,8 +579,30 @@ hr {
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--gold);
+  background: var(--gold)!important;
 }
+
+.meuSwiper {
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.meuSwiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+
+.swiper-pagination {
+    bottom: 0 !important;
+}
+
 
 
 /* ============================================================
