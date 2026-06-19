@@ -269,7 +269,7 @@
 
                 </div>
 
-            
+
                 <div class="swiper-pagination"></div>
 
             </div>
@@ -292,7 +292,7 @@
 
                     <hr class="linha1">
 
-                    
+
 
                     <div class="card">
 
@@ -335,7 +335,7 @@
 
                         <p>
                             R$7.944,16
-                        </p>   
+                        </p>
                     </div>
 
                 </div>
@@ -378,7 +378,7 @@
 
     </section>
 
-    
+
 
 
     <!-- CONTATO -->
@@ -490,21 +490,35 @@
 
     <script>
         new Swiper(".meuSwiper", {
-            slidesPerView: 3,
-            spaceBetween: 20,
             loop: true,
 
-            autoplay: {
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            },
+
+             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
             },
 
+
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-            },
-
-            
+            }
         });
     </script>
 
